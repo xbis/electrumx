@@ -667,6 +667,27 @@ class LitecoinTestnet(Litecoin):
     ]
 
 
+class LitecoinRegtest(Litecoin):
+    SHORTNAME = "XLR"
+    NET = "regtest"
+    XPUB_VERBYTES = bytes.fromhex("043587cf")
+    XPRV_VERBYTES = bytes.fromhex("04358394")
+    P2PKH_VERBYTE = bytes.fromhex("6f")
+    P2SH_VERBYTES = [bytes.fromhex("3a"), bytes.fromhex("c4")]
+    WIF_BYTE = bytes.fromhex("ef")
+    GENESIS_HASH = ('530827f38f93b43ed12af0b3ad25a288'
+                    'dc02ed74d6d7857862df51fc56c416f9')
+    TX_COUNT = 1
+    TX_COUNT_HEIGHT = 1
+    TX_PER_BLOCK = 1
+    RPC_PORT = 19332
+    REORG_LIMIT = 4000
+    PEER_DEFAULT_PORTS = {'t': '19200', 's': '19202'}
+    PEERS = [
+        '127.0.0.1 s t',
+    ]
+
+
 class Viacoin(AuxPowMixin, Coin):
     NAME="Viacoin"
     SHORTNAME = "VIA"
