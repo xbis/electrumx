@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec /electrumx/electrumx_server.py
+
